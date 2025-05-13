@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int numTask = 3;
+        int numTask = 2;
         switch (numTask) {
 //====================================Task 1================================================
             case (1):
@@ -20,7 +20,19 @@ public class Main {
             case (2):
                 int rowTriangleTask2 = 4;
                 int columnTriangleTask2 = 5;
-                //int[][] arrTriangleTask2 = new int[row + 1][columnTriangleTask2 + 1];
+                int[][] arrTriangleTask2 = new int[rowTriangleTask2 + 1][columnTriangleTask2 + 1];
+                for(int countR = 0; countR < rowTriangleTask2; countR++){
+                    for (int countC = 0; countC < columnTriangleTask2; countC++){
+                        arrTriangleTask2[countC][countR] = 1;
+                        if(countR  == (rowTriangleTask2 -1)){
+                                arrTriangleTask2[countC][countR] = 1;
+                                System.out.print(arrTriangleTask2[countC][countR]);
+                        } else {
+                            System.out.print(arrTriangleTask2[countR][countC]);
+                        }
+                    }
+                    System.out.println(" ");
+                }
 
             break;
 //====================================Task 3================================================
@@ -38,18 +50,6 @@ public class Main {
                     }
                     System.out.println("");
                 }
-
-
-
-
-
-
-
-
-
-
-
-
             break;
         }
     }
